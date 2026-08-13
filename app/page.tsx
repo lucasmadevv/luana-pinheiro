@@ -23,7 +23,7 @@ const services = [
   {
     number: "01",
     icon: Sparkles,
-    title: "Psicoterapia",
+    title: "Psicologia clínica",
     text: "Um espaço seguro para compreender emoções, fortalecer recursos e construir novas formas de lidar com o que hoje pesa.",
     tags: ["Adultos", "Adolescentes", "Crianças"],
   },
@@ -60,11 +60,11 @@ const testimonials = [
 const faqs = [
   {
     q: "Para quem é o atendimento?",
-    a: "A psicoterapia é voltada a crianças, adolescentes e adultos. A indicação mais adequada é compreendida com cuidado no primeiro contato.",
+    a: "A psicologia clínica é voltada a crianças, adolescentes e adultos. A indicação mais adequada é compreendida com cuidado no primeiro contato.",
   },
   {
     q: "Qual é a abordagem utilizada?",
-    a: "Luana trabalha com a Terapia Cognitivo-Comportamental, uma abordagem colaborativa, estruturada e baseada em evidências.",
+    a: "Trabalho com TCC e terapias de terceira geração, uma abordagem colaborativa, estruturada e baseada em evidências.",
   },
   {
     q: "Como funciona a avaliação neuropsicológica?",
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: "Como dar o primeiro passo?",
-    a: "Use o botão de contato para conversar diretamente pelo Instagram. Você poderá tirar dúvidas e receber as orientações iniciais.",
+    a: "Use o botão de contato para conversar diretamente pelo WhatsApp. Você poderá tirar dúvidas e receber as orientações iniciais.",
   },
 ];
 
@@ -132,17 +132,6 @@ export default function Home() {
       });
 
       mm.add("(min-width: 900px)", () => {
-        gsap.to(".hero-image-inner", {
-          yPercent: 12,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".hero",
-            start: "top top",
-            end: "bottom top",
-            scrub: 0.8,
-          },
-        });
-
         gsap.to(".about-orbit", {
           rotate: 90,
           ease: "none",
@@ -268,13 +257,30 @@ export default function Home() {
                 Conhecer a Luana <ArrowDown size={16} />
               </a>
             </div>
+            <p className="hero-language-note hero-fade">
+              Atendimentos exclusivamente em português
+              <span className="hero-flags" aria-label="Brasil e Portugal">
+                <Image
+                  src="/flag-brazil.svg"
+                  alt="Bandeira do Brasil"
+                  width={24}
+                  height={16}
+                />
+                <Image
+                  src="/flag-portugal.svg"
+                  alt="Bandeira de Portugal"
+                  width={24}
+                  height={16}
+                />
+              </span>
+            </p>
           </div>
 
           <div className="hero-visual hero-fade">
             <div className="hero-portrait">
               <div className="hero-image-inner">
                 <Image
-                  src="/luana-pinheiro.jpg"
+                  src="/hero.png"
                   alt="Psicóloga Luana Pinheiro sorrindo em seu consultório"
                   fill
                   priority
@@ -286,7 +292,7 @@ export default function Home() {
             <div className="credential-card">
               <span>Psicóloga &</span>
               <strong>Neuropsicóloga</strong>
-              <small>CRP 17/3012</small>
+              <small>CRP 05/43.417 | OPP 26039</small>
             </div>
             <div className="sun-seal" aria-hidden="true">
               <svg viewBox="0 0 120 120">
@@ -313,7 +319,7 @@ export default function Home() {
           <div className="ticker-track">
             {[0, 1].map((group) => (
               <div className="ticker-group" key={group}>
-                <span>Psicoterapia</span>
+                <span>Psicologia clínica</span>
                 <Asterisk />
                 <span>Neuropsicologia</span>
                 <Asterisk />
@@ -362,8 +368,8 @@ export default function Home() {
                 — da infância à vida adulta.
               </p>
               <div className="credentials">
-                <span><Check /> Mestre em Psicologia</span>
-                <span><Check /> Especialista em Neuropsicologia Clínica</span>
+                <span><Check /> Mestre em psicologia - Recon Uminho Braga, PT</span>
+                <span><Check /> Neuropsicologia Clínica</span>
                 <span><Check /> Terapia Cognitivo-Comportamental</span>
               </div>
             </div>
@@ -423,7 +429,7 @@ export default function Home() {
               {[
                 ["Primeiro contato", "Você conta brevemente o que busca e recebe as orientações iniciais."],
                 ["Encontro inicial", "Um momento de escuta para compreender sua história e suas necessidades."],
-                ["Plano de cuidado", "Juntas, vocês definem objetivos e o percurso mais adequado para você."],
+                ["Plano de cuidado", "Juntos, vocês definem objetivos e o percurso mais adequado para você."],
               ].map(([title, text], index) => (
                 <li className="reveal" key={title}>
                   <span>0{index + 1}</span>
@@ -527,7 +533,7 @@ export default function Home() {
           </a>
         </div>
         <div className="footer-bottom">
-          <span>CRP 17/3012</span>
+          <span>CRP 05/43.417 | OPP 26039</span>
           <span>© {new Date().getFullYear()} Luana Pinheiro</span>
           <a href="#inicio">Voltar ao topo ↑</a>
         </div>

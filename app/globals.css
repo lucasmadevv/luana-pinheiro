@@ -297,7 +297,7 @@ button {
 
 .hero-intro {
   max-width: 480px;
-  margin: 38px 0 28px 9vw;
+  margin: 38px 0 28px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
@@ -305,9 +305,34 @@ button {
 
 .hero-actions {
   display: flex;
-  margin-left: 9vw;
+  margin: 0;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
+}
+
+.hero-language-note {
+  display: flex;
+  margin: 1.5rem 0 0;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-flags {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-flags img {
+  display: block;
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(30, 33, 29, 0.12);
 }
 
 .text-link {
@@ -322,28 +347,44 @@ button {
 .hero-visual {
   position: relative;
   z-index: 2;
-  width: min(100%, 600px);
-  margin: 30px auto 0;
-  padding: 0 38px 58px;
+  width: min(100%, 610px);
+  margin: 18px auto 0;
+  padding: 24px 70px 54px 20px;
+}
+
+.hero-visual::before {
+  position: absolute;
+  z-index: 0;
+  top: 8px;
+  right: 38px;
+  width: min(calc(100% - 130px), 410px);
+  aspect-ratio: 663 / 984;
+  border: 1px solid rgba(182, 87, 63, 0.3);
+  background: rgba(182, 87, 63, 0.08);
+  content: "";
+  transform: translate(18px, 18px);
 }
 
 .hero-portrait {
   position: relative;
-  height: min(64vh, 640px);
-  min-height: 510px;
-  border-radius: 300px 300px 12px 12px;
+  z-index: 1;
+  width: min(100%, 410px);
+  aspect-ratio: 663 / 984;
+  margin-left: auto;
+  border-radius: 4px;
   overflow: hidden;
   clip-path: inset(0 0 0 0);
+  box-shadow: 0 28px 65px rgba(72, 37, 30, 0.14);
 }
 
 .hero-image-inner {
   position: absolute;
-  inset: -12% 0;
+  inset: 0;
 }
 
 .hero-image-inner img {
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
   filter: saturate(0.82) contrast(0.97);
 }
 
@@ -372,8 +413,8 @@ button {
 .credential-card {
   position: absolute;
   z-index: 3;
-  right: -15px;
-  bottom: 5px;
+  right: -4px;
+  bottom: 18px;
   display: flex;
   width: 220px;
   height: 155px;
@@ -407,8 +448,8 @@ button {
 .sun-seal {
   position: absolute;
   z-index: 4;
-  top: 17%;
-  left: -14px;
+  top: 13%;
+  left: 66px;
   display: grid;
   width: 112px;
   height: 112px;
@@ -643,11 +684,11 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .credentials svg {
-  width: 15px;
+  width: 19px;
   color: var(--terra);
 }
 
@@ -1244,27 +1285,40 @@ footer {
     gap: 16px;
   }
 
+  .hero-language-note {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
   .hero-visual {
     width: 100%;
     margin-top: 62px;
-    padding: 0 12px 56px;
+    padding: 18px 28px 58px 0;
+  }
+
+  .hero-visual::before {
+    top: 0;
+    right: 6px;
+    width: calc(100% - 28px);
+    transform: translate(0, 14px);
   }
 
   .hero-portrait {
-    height: 560px;
-    min-height: 0;
-    border-radius: 250px 250px 10px 10px;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 4px;
   }
 
   .sun-seal {
-    top: 13%;
-    left: -5px;
+    top: 11%;
+    left: -12px;
     width: 92px;
     height: 92px;
   }
 
   .credential-card {
-    right: -5px;
+    right: -4px;
+    bottom: 14px;
     width: 190px;
     height: 135px;
   }
@@ -1385,7 +1439,6 @@ footer {
 
 @media (max-width: 420px) {
   .hero h1 { font-size: 56px; }
-  .hero-portrait { height: 490px; }
   .about-heading { font-size: 41px; }
   .about-copy .lead { font-size: 29px; }
   .process-heading h2,
