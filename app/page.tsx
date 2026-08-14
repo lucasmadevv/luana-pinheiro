@@ -259,16 +259,16 @@ export default function Home() {
             </div>
             <p className="hero-language-note hero-fade">
               Atendimentos exclusivamente em português
-              <span className="hero-flags" aria-label="Brasil e Portugal">
+              <span className="hero-flags" aria-label="Portugal e Brasil">
                 <Image
-                  src="/flag-brazil.svg"
-                  alt="Bandeira do Brasil"
+                  src="/flag-portugal.svg"
+                  alt="Bandeira de Portugal"
                   width={24}
                   height={16}
                 />
                 <Image
-                  src="/flag-portugal.svg"
-                  alt="Bandeira de Portugal"
+                  src="/flag-brazil.svg"
+                  alt="Bandeira do Brasil"
                   width={24}
                   height={16}
                 />
@@ -280,7 +280,7 @@ export default function Home() {
             <div className="hero-portrait">
               <div className="hero-image-inner">
                 <Image
-                  src="/hero.png"
+                  src="/hero-image.png"
                   alt="Psicóloga Luana Pinheiro sorrindo em seu consultório"
                   fill
                   priority
@@ -292,7 +292,7 @@ export default function Home() {
             <div className="credential-card">
               <span>Psicóloga &</span>
               <strong>Neuropsicóloga</strong>
-              <small>CRP 05/43.417 | OPP 26039</small>
+              <small>OPP 26039 | CRP 05/43.417</small>
             </div>
             <div className="sun-seal" aria-hidden="true">
               <svg viewBox="0 0 120 120">
@@ -371,6 +371,7 @@ export default function Home() {
                 <span><Check /> Mestre em psicologia - Recon Uminho Braga, PT</span>
                 <span><Check /> Neuropsicologia Clínica</span>
                 <span><Check /> Terapia Cognitivo-Comportamental</span>
+                <span><Check /> Especialista em Psicologia Clínica e da Saúde - OPP</span>
               </div>
             </div>
           </div>
