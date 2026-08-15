@@ -39,21 +39,33 @@ const services = [
 const testimonials = [
   {
     quote:
-      "Profissional competente, empática e muito zelosa com os pacientes.",
-    name: "Maria Núbia",
-    meta: "Opinião verificada",
+      "A terapia foi essencial para meu autoconhecimento. Hoje tenho ferramentas para lidar com a ansiedade e encontrei uma profissional empática e acolhedora.",
+    name: "Paciente adulta",
+    meta: "Relato anonimizado",
   },
   {
     quote:
-      "Atenciosa e muito dedicada no atendimento. Técnicas que fazem toda diferença.",
-    name: "José Medeiros",
-    meta: "Opinião verificada",
+      "A Luana transmite calma, é objetiva e nos ajuda a repensar atitudes e sentimentos. Sua atenção e orientação foram cruciais em um momento difícil.",
+    name: "Paciente em acompanhamento",
+    meta: "Relato anonimizado",
   },
   {
     quote:
-      "Um trabalho que impacta a vivência da família, com mais qualidade de vida e relacionamento.",
-    name: "Emilene Costa",
-    meta: "Consulta verificada",
+      "Meu filho teve o privilégio de ser acompanhado pela Luana. O tratamento foi um sucesso e encontramos uma profissional ética, competente e acolhedora.",
+    name: "Mãe de paciente",
+    meta: "Relato anonimizado",
+  },
+  {
+    quote:
+      "Luana conquistou a confiança do meu filho e tornou as sessões agradáveis. Seu profissionalismo e carinho foram muito importantes em todo o processo.",
+    name: "Responsável por paciente",
+    meta: "Relato anonimizado",
+  },
+  {
+    quote:
+      "Ao buscar ajuda para minha filha, percebi que também precisava me cuidar. Com a Luana encontrei acolhimento, segurança e uma profissional verdadeiramente humana.",
+    name: "Mãe e paciente",
+    meta: "Relato anonimizado",
   },
 ];
 
@@ -466,7 +478,7 @@ export default function Home() {
             ))}
           </div>
           <p className="review-source reveal">
-            Depoimentos públicos de pacientes · Doctoralia
+            Relatos reais resumidos e anonimizados
           </p>
         </section>
 
